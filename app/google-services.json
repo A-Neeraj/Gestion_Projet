@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "665541026294",
+    "project_id": "gestion-projet-6e627",
+    "storage_bucket": "gestion-projet-6e627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665541026294:android:eba15a0c041a3b144867d7",
+        "android_client_info": {
+          "package_name": "com.neeraj.gestion_projet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665541026294-si4agb89s7f8j463kq22h24d3n7s5hq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNCS269o9Rf_C1IOwzK8DI5D-VS85BVmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "665541026294-si4agb89s7f8j463kq22h24d3n7s5hq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
