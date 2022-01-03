@@ -113,16 +113,16 @@ class CardDetailsActivity : BaseActivity() {
         return colorList
     }
 
-    private fun priorityList():ArrayList<String>{
-        val priority:ArrayList<String> = ArrayList()
-        priority.add("Priority 1")
-        priority.add("Priority 2")
-        priority.add("Priority 3")
-        priority.add("Priority 4")
-        priority.add("Priority 5")
-        priority.add("Priority 6")
-        priority.add("Priority 7")
-        return priority
+    private fun labelList():ArrayList<String>{
+        val label:ArrayList<String> = ArrayList()
+        label.add("Label 1")
+        label.add("Label 2")
+        label.add("Label 3")
+        label.add("Label 4")
+        label.add("Label 5")
+        label.add("Label 6")
+        label.add("Label 7")
+        return label
     }
 
     private fun setColor(){
@@ -240,8 +240,8 @@ class CardDetailsActivity : BaseActivity() {
 
     private fun labelColorsListDialog(){
         val colorsList:ArrayList<String> = colorsList()
-        val priorityList:ArrayList<String> = priorityList()
-        val listDialog=object :LabelColorListDialog(this,colorsList,priorityList,"Select Label Color",mSelectedColor){
+        val labelList:ArrayList<String> = labelList()
+        val listDialog=object :LabelColorListDialog(this,colorsList,labelList,"Select Label Color",mSelectedColor){
             override fun onIemSelected(color: String) {
                 mSelectedColor=color
                 setColor()

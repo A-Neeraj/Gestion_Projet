@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.neeraj.gestion_projet.R
 import kotlinx.android.synthetic.main.item_label_colour.view.*
 
-class LabelColorListItemAdapter (private val context:Context,private val list:ArrayList<String>,private val priority:ArrayList<String>,private val mSelectedColor:String)
+class LabelColorListItemAdapter (private val context:Context,private val list:ArrayList<String>,private val label:ArrayList<String>,private val mSelectedColor:String)
     :RecyclerView.Adapter<RecyclerView.ViewHolder>()
 {
     var onItemClickListener:OnItemClickListener?=null;
@@ -24,7 +24,7 @@ class LabelColorListItemAdapter (private val context:Context,private val list:Ar
         if(holder is MyViewHolder)
         {
             holder.itemView.view_main.setBackgroundColor(Color.parseColor(item))
-            holder.itemView.priority_text.setText(priority[position])
+            holder.itemView.label_text.setText(label[position])
 
             if(item==mSelectedColor)
                 holder.itemView.iv_selected_color.visibility=View.VISIBLE
@@ -40,6 +40,7 @@ class LabelColorListItemAdapter (private val context:Context,private val list:Ar
         }
 
     }
+
 
     override fun getItemCount(): Int {
         return list.size

@@ -11,7 +11,7 @@ import com.neeraj.gestion_projet.adapters.LabelColorListItemAdapter
 import kotlinx.android.synthetic.main.dialog_list.*
 import kotlinx.android.synthetic.main.dialog_list.view.*
 
-abstract class LabelColorListDialog(context: Context,private var list:ArrayList<String>,private var priority:ArrayList<String>,private val title:String="",private var mSelectedColor:String="")
+abstract class LabelColorListDialog(context: Context,private var list:ArrayList<String>,private var label:ArrayList<String>,private val title:String="",private var mSelectedColor:String="")
     :Dialog(context){
     private var adapter: LabelColorListItemAdapter?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +28,7 @@ abstract class LabelColorListDialog(context: Context,private var list:ArrayList<
     {
         view.tvTitle.text=title
         view.rvList.layoutManager=LinearLayoutManager(context)
-        adapter= LabelColorListItemAdapter(context,list,priority,mSelectedColor)
+        adapter= LabelColorListItemAdapter(context,list,label,mSelectedColor)
         view.rvList.adapter=adapter
 
         adapter!!.onItemClickListener=object :LabelColorListItemAdapter.OnItemClickListener{
